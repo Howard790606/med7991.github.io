@@ -34,7 +34,8 @@ export default class Blog extends Component {
                     <Route exact path="/about" component={About} />
                     <Route exact path="/medcalculator" component={MedCalculator} />
                     <Route exact path="/notes" component={Notes} />
-                    <Redirect from="/about" to="/" />
+                    <Route exact path="/" component={MedCalculator} />
+                    <Redirect from="/medcalculator" to="/" />
                 </Switch>
             </div>
         );
